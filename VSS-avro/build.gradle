@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.commercehub.gradle.plugin:gradle-avro-plugin:0.14.0"
+    }
+}
+apply plugin: "com.commercehub.gradle.plugin.avro"
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+dependencies {
+    compile "org.apache.avro:avro:1.8.2"
+    compile "org.apache.avro:avro-ipc:1.8.2"
+}
+
+task generateAvro(type: com.commercehub.gradle.plugin.avro.GenerateAvroJavaTask) {
+    source("src/main/avro")
+}

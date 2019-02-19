@@ -1,0 +1,13 @@
+@namespace("ch.hsr.dsl")
+
+protocol MyProtocol{
+  record AMessage {
+     string request;
+     int code;
+  }
+  record BMessage {
+     string reply;
+  }
+
+  BMessage GetMessage(AMessage msg);
+}

@@ -1,0 +1,12 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven{url 'http://tomp2p.net/dev/mvn/'}
+}
+
+dependencies {
+    compile 'net.tomp2p:tomp2p-all:5.0-Beta8'
+}

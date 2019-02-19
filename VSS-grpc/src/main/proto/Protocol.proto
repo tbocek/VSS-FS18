@@ -1,0 +1,16 @@
+option java_package = "ch.hsr.dsl";
+
+service RegistrationProtocol {
+   rpc Register(RequestMessage) returns (ReplyMessage) {}
+}
+
+message RequestMessage {
+  required string firstName=1;
+  required string lastName=2;
+  required string affiliation=3;
+  required int32 pin=4;
+}
+
+message ReplyMessage {
+  required string reply=1;
+}
